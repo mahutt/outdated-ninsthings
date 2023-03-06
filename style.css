@@ -10,6 +10,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-image: url("img/doodle.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+}
+
 h1 {
     font-size: 70px;
     font-weight: 900;
@@ -58,7 +65,6 @@ h1 {
     justify-content: space-between;
     margin-top: 40px;
     padding: 0 40px;
-    
 }
 
 #main .bubble {
