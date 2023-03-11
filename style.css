@@ -7,11 +7,28 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Mynerve', cursive;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* background-image: url("img/doodle.png"); */
+    background-repeat: repeat;
+    background-attachment: fixed;
+
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 70px;
+    font-weight: 900;
+    text-shadow: 0 0 100px white;
+    color: #660708;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 900;
+    /* text-shadow: 0 0 100px white; */
+    color: #ddd;
 }
 
 
@@ -20,6 +37,7 @@ h1 {
     position: sticky;
     top: 0;
     left: 0;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,6 +45,7 @@ h1 {
     padding: 30px 50px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    font-family: 'Mynerve', cursive;
 }
 
 #header a {
@@ -34,7 +53,7 @@ h1 {
 }
 
 #header p {
-    font-size: 80px;  
+    font-size: 60px;  
 }
 
 #header .logo {
@@ -46,40 +65,119 @@ h1 {
 #header .headline {
     font-family: 'Mynerve', cursive;
     /* color: rgb(235, 235, 235); */
-    color: #660708;
+    color: #bbb;
 }
 
 #main {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    padding: 0 60px;
-    
+    padding: 0 40px;
 }
 
 #main .bubble {
-    width: 30%;
-    height: 50vh;
-    /* border: 1px solid black; */
-    box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.03), -20px -20px 5px rgba(0, 0, 0, 0.03);
-    border-radius: 40px;
+    margin-bottom: 100px;
+    width: 32%;
+    height: 70vh;    
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    padding: 40px 20px;
+    justify-content: center;
+    text-align: center;
+    /* background-image: url("img/shirts/stayhorny/stayhorny1.JPG"); */
+    /* background-size: cover; */
+}
+
+@keyframes imagerun {
+    0% {background-image: url("img/shirts-bubble/bb1.JPG");} 
+    20% {background-image: url("img/shirts-bubble/bb2.JPG");}
+    40% {background-image: url("img/shirts-bubble/bb3.JPG");}
+    60% {background-image: url("img/shirts-bubble/bb4.JPG");}
+    80% {background-image: url("img/shirts-bubble/bb0.JPG");}
+    100% {background-image: url("img/shirts-bubble/bb1.JPG");}
+}
+
+#shirts-bubble {
+    background-image: url("img/shirts-bubble/bb1.JPG");
+    background-size: cover;
+    
+}
+
+#shirts-bubble:hover {
+    animation-name: imagerun;
+    animation-duration: 4s;
+}
+
+#main .bubble:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+    transition: 0.8s ease;
+    
+}
+
+
+#bags-bubble, #other-bubble {
+    /* background-image: url("img/bags/green.jpg"); */
+    background-size: cover;
+    background-color: #bbb;
 }
 
 #main .bubble img {
-    width: 90%;
-    border-radius: 30px;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    width: 100%;
+    border-radius: 20px;
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
     transition: 0.1s ease;
 }
+
+
 
 #main .bubble img:hover {
     filter: blur(0px);
     -webkit-filter: blur(0px);
 }
+
+@media (max-width: 500px) {
+
+    #main {
+        flex-wrap: wrap;   
+        margin-top: 20px;
+        padding: 0 15px; 
+    }
+    #main .bubble {
+        width: 100%;
+    }
+    #header {
+    padding: 15px 25px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    #header .headline {
+        font-size: 30px;
+    }
+    #header .logo {
+        font-size: 40px;
+    }
+    #header img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #main {
+        flex-wrap: wrap;   
+        justify-content: space-around;
+        margin-top: 20px;
+        padding: 0 15px; 
+    }
+    #main .bubble {
+        width: 45%;
+    }
+}
+
+
 
 
 
