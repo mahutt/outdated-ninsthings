@@ -1,10 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/* font for header / logo:  */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); 
 
 * {
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid black; */
 }
 
-h1 {
+p {
+    font-size: 60px;
     font-family: 'Mynerve', cursive;
+    font-weight: 100;
+    
 }
+
+/* end of generic styling */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+header .logo {
+    padding: 20px;
+    width:  10%;
+}
+
+header .heading {
+    color: #bbb;
+    padding: 20px;
+}
+
+
+header .bag {
+    width: 10%;
+    padding: 20px;
+}
+
+header .bag img {
+    width: 100%;
+}
+
+
+
+
+.header-wrapper .navbar {
+    width: 100%;
+}
+
+
+
+
+
+
