@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nin's</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        .header {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+                "logo heading shopping-bag"
+                "nav nav nav";
+        }
+        .logo {
+            grid-area: logo;
+        }
+        .heading {
+            grid-area: heading;
+        }
+        .shopping-bag {
+            grid-area: shopping-bag;
+        }
+        .nav {
+            grid-area: nav;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h1 class="logo">N</h1>
+        <h1 class="heading">nin's things</h1>
+        <img class="shopping-bag" src="/img/bag.png" width="60" alt="">
+        <nav class="nav">
+            <ul>
+                <li>Home</li>
+                <li>Products</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+</html>
