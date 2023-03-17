@@ -11,14 +11,24 @@
             box-sizing: border-box;
             border: 1px solid black;
         }
+        body {
+            /* max-width: 1200px; */
+            display: grid;
+            grid-template-rows: auto 1fr;
+            /* grid-template-columns: max(1200px); */
+            
+        }
         .header {
-            max-width: 1200px;
+            /* max-width: 1200px; */
             display: grid;
             grid-template-columns: 1fr 2fr 1fr;
             grid-template-rows: auto auto;
             grid-template-areas: 
                 "logo heading shopping-bag"
                 "nav nav nav";
+            justify-items: center;
+            /* justify-content: center; */
+
         }
         .logo {
             grid-area: logo;
@@ -50,5 +60,34 @@
         </nav>
     </div>
 
+    <div class="main">
+        hello
+    </div>
+
 </body>
 </html>
+
+
+
+
+
+public Car(int numOfWheels, int year) {
+    this.numOfWheels = numOfWheels;
+    this.year = year;
+}
+
+public Car(int numOfWheels, int year1, int year2) {
+    this.numOfWheels = numOfWheels;
+    this.year = year1-year2;
+}
+
+// INSTEAD OF THIS:
+public Car() {
+    this.numOfWheels = 0;
+    this.year = 0;
+}
+
+// YOU CAN DO THIS:
+public Car() {
+    this(0,0);
+}
